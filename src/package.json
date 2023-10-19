@@ -3,12 +3,15 @@
     "scripts": {
         "start": "node server.js",
         "test": "tap test/*.spec.js",
-        "test:coverage": "tap test/*.spec.js --coverage-report=lcov"
+        "test:coverage": "tap test/*.spec.js --coverage-report=lcov",
+        "eslint": "eslint . -f json -o eslint_report.json"
     },
     "dependencies": {
         "fastify": "^4.23.2"
     },
     "devDependencies": {
+        "eslint-plugin-my-meetup-rules": "file:../eslint-plugin-my-meetup-rules",
+        "eslint": "^8.51.0",
         "tap": "^18.4.2"
     }
 }

@@ -35,6 +35,11 @@ const app = () => {
         }
         reply.send({ length: length })
     })
+    
+    fastify.get('/custom/:pippo', async (request, reply) => {
+        const pippo = request.params.pippo
+        reply.send({ hello: pippo })
+    })
 
     return fastify
 }
